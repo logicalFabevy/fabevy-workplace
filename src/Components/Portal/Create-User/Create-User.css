@@ -1,0 +1,36 @@
+/* -------- Login & Sign up page -------------- */
+.logo{
+	width: 200px;
+	height: auto;
+}
+
+.form-group{
+	position: relative;
+	width: 100%;
+	margin: 0 auto;
+	margin-bottom: 20px;
+}
+.form-control{
+	display: block;
+	height: 48px;
+	border-radius: 5px;
+	border: solid 1px #ccc;
+    box-shadow: none;
+	font-size: 14px;
+	background-color: #fff;
+	padding-left: 45px;
+}
+.form-control:focus{
+    outline: 0;
+    box-shadow: none;
+    border-color: #999;
+}
+.form-group i{
+	position: absolute;
+    top: 12px;
+    left: 18px;
+    font-size: 20px;
+    color: #999;
+}
+
+

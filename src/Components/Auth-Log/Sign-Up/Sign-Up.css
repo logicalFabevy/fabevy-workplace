@@ -1,0 +1,167 @@
+/* -------- Login & Sign up page -------------- */
+.login-signup-img{
+	height: 100vh;
+	background-image: url('../../../assets/images/img6.png');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position-x: right;
+
+}
+
+.center-postion{
+	position: relative;
+	height: 100vh;
+}
+.login-signup-container{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 380px;
+	text-align: center;
+}
+
+.logo{
+	width: 200px;
+	height: auto;
+}
+.login-signup-header h4{
+	font-size: 18px;
+	font-weight: 600;
+	text-transform: uppercase;
+	color: #333;
+	padding-bottom: 15px;
+}
+.login-signup-header a {
+	display: inline-block;
+	text-decoration: none;
+	margin-bottom: 30px;
+}
+.login-signup-header p{
+	font-size: 14px;
+	color: #999;
+	line-height: 22px;
+	margin-top: 20px;
+}
+
+.login-sign-form-section{
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+.login-sign-form .form-group{
+	position: relative;
+	width: 100%;
+	margin: 0 auto;
+	margin-bottom: 20px;
+}
+/*.login-sign-form .form-group .form-control{
+	display: block;
+	height: 45px;
+	margin-bottom: 20px;
+	border-radius: 25px;
+	border:solid 1px #ccc;
+	box-shadow: none;
+	font-size: 14px;
+	background-color: #fff;
+	padding-left: 45px;
+}*/
+.login-sign-form .form-group .form-control{
+	display: block;
+	height: 48px;
+	border-radius: 0px;
+	border: solid 1px #fff;
+    box-shadow: 0 1px 15px #9e9e9e40;
+	font-size: 14px;
+	background-color: #fff;
+	padding-left: 45px;
+}
+.login-sign-form .form-group i{
+	position: absolute;
+    top: 12px;
+    left: 18px;
+    font-size: 20px;
+    color: #999;
+}
+
+
+.signup-link p{
+	color: #999;
+	font-size: 14px;
+	font-weight: 600;
+}
+.signup-link p > a{
+	display: inline-block;
+	text-decoration: underline;
+	color: red;
+	font-weight: 600;
+	margin-left: 10px;
+}
+
+.border-login-or{
+	position: relative;
+	width: 85%;
+	text-align: center;
+	font-size: 15px;
+	color: #777;
+	margin: 0 auto;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+.border-login-or:after{
+	position: absolute;
+	content: "";
+	top: 10px;
+	left: 0;
+	width: 43%;
+	height: 1px;
+	background-color: #ccc;
+}
+.border-login-or:before{
+	position: absolute;
+	content: "";
+	top: 10px;
+	right: 0;
+	width: 43%;
+	height: 1px;
+	background-color: #ccc;
+}
+
+.login-another-way h4{
+	color: #999;
+	font-size: 14px;
+	font-weight: 600;
+}
+.login-another-way .login-social-account{
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+.login-social-account a{
+	display: inline-block;
+	font-size: 13px;
+	text-decoration: none;
+	color: #fff;
+	border:solid 1px #fff;
+	border-radius: 0px;
+	box-shadow: 0 2px 6px #ccc;
+	margin: 0 3px;
+    padding: 5px 12px;
+}
+.login-social-account a i{
+	margin-right: 5px;
+}
+.login-social-account a.fb-link{
+	background-color: #3b5998;
+	border:solid 1px #3b5998;
+}
+.login-social-account a.twit-link{
+	background-color: #00acee ;
+	border:solid 1px #00acee ;
+}
+
+.login-social-account a.gmail-link{
+	background-color: #D44638;
+	border:solid 1px #D44638;
+}
+.login-social-account a:hover{
+	opacity: 0.9;
+}

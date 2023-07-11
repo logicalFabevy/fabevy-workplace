@@ -1,0 +1,8 @@
+.main-wrapper{
+    padding: 80px 30px 50px;
+    flex: 1 0 0%;
+    height: 100vh;
+    overflow-y: auto;
+}
+
+

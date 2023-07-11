@@ -1,0 +1,127 @@
+.img{
+    width: 50vw;
+    height: 100vh;
+    background-color: #ecf5f5;
+    background-image: url("../../../assets/images/img4.jpg");
+    background-size: cover;
+    background-position: center;
+}
+.left-side{
+    width: 50vw;
+    height: 100vh;
+    background-color:#ecf5f5;
+    display: flex;
+    align-items: center;
+}
+.login-logo{
+    display: block;
+    width: 200px;
+    height: auto;
+    margin: 0 0 10px;
+    
+
+}
+.form-container{
+    width: 400px;
+    margin: 0 auto;
+    font-family: 'Poppins', sans-serif;
+}
+/* .form-container, .form-container h2, p{
+    padding: 10px;
+} */
+.form-container h2{
+    font-size: 30px;
+    font-weight: 300;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.form-container h2 span{
+    font-weight: 600;
+}
+.form-container p{
+    color: #818181;
+    font-weight: 200;
+}
+.form-group{
+    margin-bottom: 15px;
+}
+.form-inputs{
+    width: 100%;
+    padding: 10px 15px;
+    margin-bottom: 0;
+    border: solid 1px #fff;
+    border-radius: 5px;
+    outline: 0;
+}
+.form-inputs:focus{
+    outline: 0;
+    box-shadow: none;
+    border-color: #ccc;
+}
+
+.check{
+    padding: 15px 0;
+    color: #918e8e;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+input[type=checkbox]{
+    width: 18px;
+    height: 18px;
+    accent-color: #fb771a;
+    color: #fff;
+}
+
+.check a{
+    color: #918e8e;
+    font-size: 15px;
+}
+.checkbox > label {
+    margin-left: 5px;
+}
+.btn-login{
+    background-color: #fb771a;
+    color: #fff;
+}
+.btn-login:hover{
+    background-color: #fc842f;
+    color: #fff;
+}
+.btn-login:active{
+    background-color: #fc842f;
+    border-color: #fc842f;
+    color: #fff;
+    outline: 0;
+}
+.btn-login:focus{
+    background-color: #fc842f;
+    border-color: #fc842f;
+    color: #fff;
+    outline: 0;
+}
+
+.form-container .error-msg{
+    color: hsl(15deg 100% 50% / 70%);
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin: 5px 0 0 0;
+    text-align: left;
+  }
+input:-internal-autofill-selected {
+    background-color: #fff !important;
+}
+
+@media (max-width:999px){
+    .form-container {
+        width: 400px;
+        padding: 0px 20px;
+    }
+    
+    .right-side{
+        display: none;
+    }  
+    .left-side{
+        width: 100%;
+    }
+}

@@ -1,0 +1,15 @@
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -15px;
+    margin-right: -15px;
+}
+.row>*{
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+
+
+    

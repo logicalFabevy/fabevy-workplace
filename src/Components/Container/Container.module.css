@@ -1,0 +1,55 @@
+.container{
+    width: 100%;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.containerFluid{
+    width: 100%;
+    padding: 0 15px;
+}
+
+
+/*Mobile ------ < 576
+Small device ----- > 576
+Tab or medium ---- > 768
+Laptop ----- > 992 / 1200
+Desktop ---- > 1200 / 1400*/
+    
+@media (min-width: 576px){
+    .container{
+      width: 550px;
+    }
+}
+    
+    
+@media (min-width: 768px){
+    
+    .container{
+      width: 720px;
+    }
+    
+    
+    
+}
+    
+@media (min-width: 992px){
+    .container{
+      width: 960px;
+    }
+}
+       
+@media (min-width: 1200px){
+    .container{
+      width: 1170px;
+    }
+    
+}
+
+/* ----- larger device ------ */
+@media (min-width: 1400px){
+    .container{
+      width: 90%;
+    }
+    
+}

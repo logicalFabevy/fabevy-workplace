@@ -1,0 +1,54 @@
+/* Side nav -----------------------
+----------------------------------*/
+.sidenav-bar{
+    width: 250px;
+    height: 100vh;
+    background-image: url("../../assets/images/sidenav-bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #051e34;
+    transition: all 0.5s ease;
+    overflow: hidden;
+    overflow-y: auto;
+}
+
+.side-logo{
+    display: flex;
+    align-items: center;
+    min-height: 60px;
+    padding: 8px 15px;
+    box-shadow: 0 -1px 0 rgb(255,255,255,0.1) inset;
+}
+.side-logo > .logo{
+    text-decoration: none;
+}
+.logo img{
+    display: block;
+}
+
+.navbar-list{
+    width: 100%;
+    padding:20px 10px 0px;
+}
+.navlink{
+    position: relative;
+    display: block;
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.8);
+    padding: 10px 20px 10px 40px;
+    background-color: transparent;
+    border-radius: 4px;
+    font-weight: 500;
+}
+.navlink:hover{
+    background-color: rgb(255 255 255 / 16%);
+    color: #fff;
+}
+.navlink.active{
+    background-color: rgb(255 255 255 / 16%);
+}
+.navlink i{
+    position: absolute;
+    left: 15px;
+    top: 14px;
+}
