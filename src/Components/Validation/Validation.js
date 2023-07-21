@@ -39,8 +39,7 @@ export const REQUIRE_LETTER = (state, action)=>{
     if(action.type !== "" && !(action.val.trim().length > 0)){
         return {value: action.val, isValid: false, msg: action.msg}
     }
-    if(action.type === "REQUIRELETTER")
-    {
+    if(action.type === "REQUIRELETTER"){
         if(action.val.match(isLetters)){
             return {value: action.val, isValid: action.val.trim().length > 0, msg: ""}
         }else{
@@ -81,6 +80,26 @@ export const VALIDATOR_PASSWORD = (state, action)=>{
             return {value: action.val, isValid: action.val.trim().length > 0, msg:""}
         }else{
             return {value: action.val, isValid: false, msg:"Please Enter Valid password"}
+        }
+    }
+    if(action.type === "INVALID"){
+        return {value: action.val, isValid: false, msg: action.msg}
+    }
+    return {value:'', isValid:null, msg:""}
+}
+
+export const VALIDATOR_URL = (state, action)=>{
+    let isUrl = (/(?:https?):\/\/(\w+:?\w*)?(\S+)(:\d+)?(\/|\/([\w#!:.?+=&%!\-\/]))?/);
+    
+    if(action.type === "URL"){
+        if(!(action.val.trim().length > 0)){
+            return {value: action.val, isValid: false, msg:action.msg}
+        }
+       
+        if(action.val.match(isUrl)){
+            return {value: action.val, isValid: action.val.trim().length > 0, msg:""}
+        }else{
+            return {value: action.val, isValid: false, msg:"Please Enter Valid URL"}
         }
     }
     if(action.type === "INVALID"){

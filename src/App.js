@@ -1,51 +1,48 @@
 import './App.css';
 import React, { useEffect, useState } from 'react';
-import { Outlet, useNavigate } from 'react-router';
-import ContainerFluid from './Components/Container/Container-fluid';
-import Sidenave from './Components/Sidenav/Sidenav';
-import Header from './Components/Header/Header';
-import axios from 'axios';
+import { Route, Routes } from 'react-router';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetUserData, fetchUserData } from './Rdxstore/user-slice';
+import { BrowserRouter } from 'react-router-dom';
+import Auth from './Components/Auth-Log/Auth/Auth';
+import LoginPage from './Components/Auth-Log/Login-Page/Login-Page';
+import Webinar from "./Components/Portal/Leads/Webinar";
+import MainWrapper from './Components/Portal/Main-Wrapper/Main-Wrapper';
+import Workline from './Components/Portal/Workline/Workline';
+import Timesheet from './Components/Portal/Timesheet/Timesheet';
+import Studentbatch from './Components/Portal/Studentbatch/Studentbatch';
+import CreateUser from './Components/Portal/Create-User/Create-User';
+import CourseCertificate from './Components/Portal/Course-Certificate/Course-Certificate';
+import ErrorPage from './Components/Portal/Error-Page/Error-Page';
 
 function App() {
-  const baseURL = process.env.REACT_APP_API_URL;
-  const token = localStorage.getItem("fabtoken");
-  const navigate = useNavigate();
-  const [isLogged, setIslogged] = useState(false);
-  const dispatch = useDispatch();
-  const userData = useSelector(state => state.user)
 
-  const checkIslogged = () =>{
-    if(!token){
-      setIslogged(false);
-      navigate("/auth/login");
-      return;
-    }
-    setIslogged(true);
-    dispatch(fetchUserData());
+  if(window.location.pathname.includes("/")){
+    window.history.replaceState(
+      "",
+      "",
+      "/workline"
+    );
   }
 
-  useEffect(()=>{
-    checkIslogged();
-    if(userData.isExpired){
-        navigate("/auth/login");
-    }
-  }, [token, isLogged])
-
-
   return (
-    isLogged && !userData.loading && <ContainerFluid className="p-0">
-          <Header />
-          <section className='d-flex'>
-              <Sidenave />
-              <div className='main-wrapper'>
-                  <div className="main-wrap">
-                    <Outlet /> 
-                  </div>
-              </div>
-          </section>
-      </ContainerFluid>
+    
+      <BrowserRouter basename={'/'}>
+        <Routes>
+          <Route path="/auth" element={<Auth />}>
+            <Route path="login" element={<LoginPage />} />
+            {/* <Route path="create-user" element={<CreateUser />} />  */}
+          </Route>
+          <Route path="/" element={<MainWrapper  />}>
+            <Route path="workline" element={<Workline />} />
+            <Route path="timesheet" element={<Timesheet />} />  
+            <Route path="studentbatch" element={<Studentbatch />} />  
+            <Route path="webinar" element={<Webinar />} /> 
+            <Route path="create-user" element={<CreateUser />} />  
+            <Route path="course-certificate" element={<CourseCertificate />} />  
+          </Route>
+          <Route path="error-page" element={<ErrorPage />} />  
+        </Routes>
+      </BrowserRouter>
   );
 }
 

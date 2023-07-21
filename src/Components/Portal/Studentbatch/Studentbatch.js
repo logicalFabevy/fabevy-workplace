@@ -1,5 +1,5 @@
 import './Studentbatch.css';
-
+import React from 'react';
 const Studentbatch = (props) => {
     return (
         <div className='page-title'>

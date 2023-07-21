@@ -38,7 +38,7 @@ const ConfirModelBox = (props)=>{
                         modelData.buttons.map((btns) => {
                             return <button 
                                     key={btns.label} 
-                                    className={`${btns.label == "Yes" ? "btns btns-primary":"btns btns-secondary"}`} 
+                                    className={`${btns.label === "Yes" ? "btns btns-primary":"btns btns-secondary"}`} 
                                     name={btns.label} 
                                     onClick={()=> {removeConfirmBx(btns)}}
                                     >{btns.label}</button>

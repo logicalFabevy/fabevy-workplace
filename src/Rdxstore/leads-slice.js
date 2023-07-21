@@ -43,7 +43,7 @@ export const fetchAll = ()=>{
             loadData: true
         }))
         try{
-            const response = await axios.get(`${baseURL}/leads`);
+            const response = await axios.get(`${baseURL}/leads/webinar/`);
             const data = response.data;
             dispatchData(LeadsSlice.actions.fetchAllItem({
                 item: data || [],

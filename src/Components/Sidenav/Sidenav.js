@@ -1,7 +1,9 @@
 import "./Sidenav.css";
+import React from "react";
 import logo from "../../assets/images/logo.png";
 import { Link, NavLink } from "react-router-dom";
 import { useSelector } from "react-redux";
+
 
 const Sidenave = (props) => {
   const user = useSelector((state) => state.user);
@@ -20,7 +22,7 @@ const Sidenave = (props) => {
         <ul className="navbar-list">
           <li className="navitem">
             <NavLink
-              to=""
+              to="workline"
               className={({ isActive }) =>
                 isActive ? "navlink active" : "navlink"
               }
@@ -71,6 +73,23 @@ const Sidenave = (props) => {
               </NavLink>
               
             </li>
+          )}
+          {(userAccess.admin || 
+            userAccess.managing_director ||
+            userAccess.director_of_HR_operations ||
+            userAccess.head_of_operations) && (
+          <li className="navitem ">
+            <NavLink
+                to="course-certificate"
+                className={({ isActive }) =>
+                  `navlink ${isActive ? "active" : ""}`
+                }
+                
+              >
+                <i className="fa fa-certificate" aria-hidden="true"></i>{" "}
+                <span>Course Certificates</span>
+            </NavLink>
+          </li>
           )}
 
           {userAccess.admin && (

@@ -1,5 +1,5 @@
 import classes from './Col.module.css';
-
+import React from 'react';
 const Col = (props) => {
     return <div 
             className={`${props.xs ? classes['col-xs-'+props.xs] : ''} ${props.sm ? classes['col-sm-'+props.sm] : ''} ${props.md ? classes['col-md-'+props.md] : ''}

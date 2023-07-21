@@ -34,12 +34,7 @@ export const fetchUserData = ()=>{
             {
                 jwt: token
             })
-            // const response = await axios.post(`${baseURL}/users/validate/`, 
-            // {
-            //     headers: {
-            //     Authorization: token,
-            //     }
-            // })
+           
             const data = response.data;
             dispatch(userSlice.actions.getUserData({
                 item: {...data.data},
@@ -51,13 +46,16 @@ export const fetchUserData = ()=>{
         catch(err){
             console.log(err);
             const data = err.response;
-            
-            if(data.status == 401){
-                dispatch(userSlice.actions.getUserData({
-                    item: {},
-                    loading: false,
-                    isExpired: true
-                }))
+            if(data.status === 401){
+                if(data.data.error === "Expired token"){
+                    dispatch(userSlice.actions.getUserData({
+                        item: {},
+                        access:{},
+                        loading: false,
+                        isExpired: true
+                    }))
+                }
+                
             }
         }
     }

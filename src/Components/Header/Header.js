@@ -1,5 +1,6 @@
 import "../../assets/css/font-awesome.min.css";
 import "./Header.css";
+import React from "react";
 import ContainerFluid from "../Container/Container-fluid";
 import Flexbox from "../Flexbox/Flexbox";
 import Col from "../Flexbox/Col";
@@ -7,6 +8,7 @@ import userPic from "../../assets/images/user-img.png";
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router";
 import { Link } from "react-router-dom";
+
 const Header = (props) => {
     const navigate = useNavigate();
     const user = useSelector(state => state.user);
@@ -35,21 +37,19 @@ const Header = (props) => {
                 </Col>
                 <Col lg={7}>
                     <div className="header-actions d-flex justify-content-end">
-                        <div className="user-nav dropdown d-flex align-items-center">
-                            <div className="user-nav-info"> 
-                                <h2>{userData.firstname} {userData.lastname}</h2>
-                                <h4>{userData.role}</h4>
-                            </div>
-                            <div
-                            className="user-box dropdown-toggle"
-                            id="dropdownProfile"
-                            data-bs-toggle="dropdown"
-                            aria-expanded="false"
-                            >
-                                <img src={userPic} alt="user picture" className="user-pic" />
+                        <div className="user-nav dropdown ">
+                            <div className="dropdown-toggle d-flex align-items-center" id="dropdownProfile" data-bs-toggle="dropdown" aria-expanded="false">
+                                <div className="user-box ">
+                                    <img src={userPic} alt="user picture" className="user-pic" />
+                                </div>
+                                <div className="user-nav-info"> 
+                                    <h2>{userData.firstname} {userData.lastname}</h2>
+                                    <h4>{userData.role}</h4>
+                                </div>
+                                
                             </div>
                             <div className="dropdown-menu" aria-labelledby="dropdownProfile">
-                                
+                                    
                                 <Link className="user-nav-link" to="">
                                     <i className="fa fa-user-o" aria-hidden="true"></i> My Profile
                                 </Link>

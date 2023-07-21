@@ -238,22 +238,33 @@ Model box ---------------------*/
 /* -------------------------------------
 Forms ---------------------------------*/
 
-.forms-group{
-  margin-bottom: 15px;
+.form-group{
+	position: relative;
+	width: 100%;
+	margin: 0 auto;
+	margin-bottom: 20px;
 }
-.forms-controll{
-  width: 100%;
-  border-radius: 5px;
-  height: 40px;
-  border:solid 1px #ccc;
-  font-size: 14px;
-  padding: 5px 10px;
-  background-color: #fff;
-}
-.forms-controll:focus{
-  outline: 0;
+.form-control{
+	display: block;
+	height: 40px;
+	border-radius: 5px;
+	border: solid 1px #ccc;
   box-shadow: none;
-  border-color: #999;
+	font-size: 14px;
+	background-color: #fff;
+	padding-left: 38px;
+}
+.form-control:focus{
+    outline: 0;
+    box-shadow: none;
+    border-color: #999;
+}
+.form-group i{
+	position: absolute;
+  top: 12px;
+  left: 14px;
+  font-size: 16px;
+  color: #999;
 }
 textarea.forms-controll{
   height: 150px;

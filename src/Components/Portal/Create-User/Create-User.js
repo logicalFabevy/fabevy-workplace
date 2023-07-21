@@ -1,5 +1,5 @@
 import "./Create-User.css";
-import { useEffect, useReducer, useState } from "react";
+import React, { useEffect, useReducer, useState } from "react";
 import axios from "axios";
 import {
   REQUIRE_EMAIL,
@@ -35,7 +35,7 @@ const CreateUser = () => {
       return;
     }
     if(!userAccess.admin){
-      navigate("/auth/login");
+      navigate("/error-page");
       return;
     }
   }

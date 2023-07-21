@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './Webinar.css';
 import { useDispatch, useSelector } from 'react-redux';
 import Leadsform from './Leadsform';
@@ -52,12 +52,10 @@ const Leads = (props) =>{
     const pageNumbers =  nPages ? [...Array(nPages + 1).keys()].slice(1) : [];
 
     const nextPage = () => {
-        if(currentPage !== nPages) 
-            setCurrentPage(currentPage + 1)
+        if(currentPage !== nPages) {setCurrentPage(currentPage + 1)}
     }
     const prevPage = () => {
-        if(currentPage !== 1) 
-            setCurrentPage(currentPage - 1)
+        if(currentPage !== 1){setCurrentPage(currentPage - 1)}
     }
     
 
@@ -114,7 +112,7 @@ const Leads = (props) =>{
                     <div id="table-control" className="table-control d-flex align-items-center justify-content-between">
                         <div className="table-item-view">
                             <span>Showing</span> 
-                            <span>{fromNo == 0 ? 1 : fromNo} - {endNo > leadState.items?.length ? leadState.items?.length : endNo}</span>
+                            <span>{fromNo === 0 ? 1 : fromNo} - {endNo > leadState.items?.length ? leadState.items?.length : endNo}</span>
                             <span>of</span>
                             <span className="tl-tb-items">{leadState.items?.length}</span>
                             

@@ -1,6 +1,6 @@
 import "./Login-Page.css"
 import logo from "../../../assets/images/fabevy-logo-landscape.png";
-import { useEffect, useReducer, useState } from "react";
+import React, { useEffect, useReducer, useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router";
 import {
@@ -113,7 +113,7 @@ const LoginPage = () =>{
 
 
     return (
-        <>
+        
             <div className="container-fluid d-flex p-0">
                 <div className="left-side">
                     <div className="form-container">
@@ -162,7 +162,7 @@ const LoginPage = () =>{
                     <div className="img"></div>
                 </div>
             </div>
-        </>
+        
        
     )
 }
